@@ -166,13 +166,15 @@ if (release) {
             ]
         }
     );
-    
+
     config.plugins.push(
         new webpack.DefinePlugin({
 
             'PRODUCTION': false
         })
     );
+
+    config.output.publicPath = 'http://localhost:8080/';
 }
 
 module.exports = config;
